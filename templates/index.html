@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice AI Assistant</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .status {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .endpoints {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .endpoint {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+        .method {
+            background: #4CAF50;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        .url {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 8px;
+            border-radius: 4px;
+            margin: 5px 0;
+        }
+        .description {
+            color: #e0e0e0;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎙️ Voice AI Assistant</h1>
+        
+        <div class="status">
+            <h2>🚀 Status: Running</h2>
+            <p>Your voice AI assistant is ready to receive calls!</p>
+        </div>
+
+        <div class="endpoints">
+            <h3>📡 Available Endpoints</h3>
+            
+            <div class="endpoint">
+                <span class="method">GET</span>
+                <div class="url">/</div>
+                <div class="description">Homepage (this page)</div>
+            </div>
+            
+            <div class="endpoint">
+                <span class="method">GET</span>
+                <div class="url">/health</div>
+                <div class="description">Health check endpoint</div>
+            </div>
+            
+            <div class="endpoint">
+                <span class="method">POST</span>
+                <div class="url">/voice</div>
+                <div class="description">Initial voice call handler - asks user how to help</div>
+            </div>
+            
+            <div class="endpoint">
+                <span class="method">POST</span>
+                <div class="url">/handle_speech</div>
+                <div class="description">Processes speech input and returns AI response</div>
+            </div>
+        </div>
+
+        <div class="status">
+            <h3>📞 How to Test</h3>
+            <ol style="text-align: left; line-height: 1.6;">
+                <li>Call your Twilio phone number</li>
+                <li>Say something like "What are your hours?"</li>
+                <li>Listen to the AI response</li>
+                <li>Check your phone for the follow-up SMS</li>
+            </ol>
+        </div>
+
+        <div class="status">
+            <h3>🔧 Setup Required</h3>
+            <ul style="text-align: left; line-height: 1.6;">
+                <li>Configure your <code>.env</code> file with real API keys</li>
+                <li>Run <code>ngrok http 5000</code> in another terminal</li>
+                <li>Set Twilio webhook to your ngrok URL + <code>/voice</code></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
