@@ -1,0 +1,14 @@
+{
+  "business_name": "Eric Services",
+  "hours": "Mon–Fri 9am–6pm ET",
+  "services": ["Consulting", "AI setup", "Website builds"],
+  "pricing": "Discovery call is free. Project pricing by quote.",
+  "location": "Miami, FL",
+  "languages": ["English", "Spanish"],
+  "booking_link": "https://calendly.com/YOUR_LINK",
+  "faqs": [
+    {"q": "What are your hours?", "a": "Mon–Fri 9am–6pm ET."},
+    {"q": "Do you offer a free consult?", "a": "Yes—short discovery call is free."},
+    {"q": "How do I book?", "a": "Use our booking link; we'll also text it during the call."}
+  ]
+}
